@@ -1,55 +1,93 @@
 body {
-    background-color: #87CEFA; /* Голубой фон */
     margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-header {
-    background-color: #1E90FF;
+    padding: 0;
+    background-color: #1a1a3a; /* Темный фон */
     color: white;
-    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.case-button {
-    margin: 20px;
+.case-opening-container {
+    text-align: center;
+    width: 80%;
 }
 
-#cases-container {
+h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.case-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.case-item {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.case-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.selected img {
+    border-color: #ffd700; /* Выделение выбранного кейса золотым */
+}
+
+.arrow-up, .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.arrow-up {
+    border-bottom: 20px solid #ffd700; /* Золотая стрелка вверх */
+    margin-bottom: 10px;
+}
+
+.arrow-down {
+    border-top: 20px solid #ffd700; /* Золотая стрелка вниз */
+    margin-top: 10px;
+}
+
+.actions {
     margin-top: 20px;
 }
 
-.cases-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    justify-items: center;
-}
-
-.case img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.case p {
-    font-size: 1.5em;
-}
-
-.hidden {
-    display: none;
-}
-
 button {
-    padding: 10px 20px;
-    background-color: #1E90FF;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
     color: white;
+    background-color: #32cd32; /* Зелёная кнопка для "Попробовать снова" */
     border: none;
-    cursor: pointer;
-    font-size: 1em;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+button#sell {
+    background-color: #4682b4; /* Голубая кнопка для "Продать" */
 }
 
 button:hover {
-    background-color: #4682B4;
+    background-color: #3a9d3a; /* Изменение цвета при наведении */
+}
+
+button#sell:hover {
+    background-color: #4169e1;
 }

@@ -1,13 +1,11 @@
-document.getElementById('open-cases').addEventListener('click', function() {
-    document.getElementById('cases-container').classList.toggle('hidden');
+// При нажатии на кнопку "Попробовать снова"
+document.getElementById('try-again').addEventListener('click', function() {
+    alert('Прокрутка начинается заново!');
+    // Логика для случайного выбора кейса и прокрутки
 });
 
-const caseButtons = document.querySelectorAll('.open-case');
-
-caseButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        // Логика рандомного выбора кейса
-        const randomCase = Math.floor(Math.random() * caseButtons.length) + 1;
-        alert(`Вам выпал кейс №${randomCase}`);
-    });
+// При нажатии на кнопку "Продать"
+document.getElementById('sell').addEventListener('click', function() {
+    alert('Вы продали предмет за 2725.27₽');
+    // Логика для продажи предмета
 });
