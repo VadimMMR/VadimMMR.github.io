@@ -1,13 +1,6 @@
 const caseRow = document.getElementById('case-row');
 const tryAgainButton = document.getElementById('try-again');
-const caseOpeningSection = document.getElementById('case-opening-section');
-const openCasesButton = document.getElementById('open-cases');
 const caseWidth = 150; // Ширина одного кейса
-
-// Показываем секцию с кейсами при нажатии на кнопку "Кейсы"
-openCasesButton.addEventListener('click', function() {
-    caseOpeningSection.classList.remove('hidden');
-});
 
 // Функция для рандомного выбора кейса и прокрутки
 function spinCases() {
