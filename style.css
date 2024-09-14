@@ -7,18 +7,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
-.case-opening-container {
-    text-align: center;
-    width: 80%;
+header {
+    margin-bottom: 20px;
 }
 
 h1 {
     color: #fff;
     font-size: 36px;
     margin-bottom: 20px;
+}
+
+.case-button {
+    margin-bottom: 20px;
+}
+
+.case-button button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #4682b4; /* Голубая кнопка для открытия кейсов */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.case-button button:hover {
+    background-color: #4169e1;
+}
+
+.hidden {
+    display: none;
+}
+
+.case-opening-container {
+    text-align: center;
+    width: 80%;
 }
 
 .case-wrapper {
