@@ -1,0 +1,55 @@
+body {
+    background-color: #87CEFA; /* Голубой фон */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #1E90FF;
+    color: white;
+    padding: 20px 0;
+}
+
+.case-button {
+    margin: 20px;
+}
+
+#cases-container {
+    margin-top: 20px;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.case img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.case p {
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4682B4;
+}
