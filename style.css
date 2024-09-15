@@ -3,34 +3,61 @@ body {
     background-color: #2b2d42;
     color: #edf2f4;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .case-opening {
-    text-align: center;
-    position: relative;
-    width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
-
 
 .case-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    width: 600px;
-    height: 200px;
+    width: 100%; /* Автоматическое растягивание */
+    max-width: 600px; /* Максимальная ширина */
+    height: 200px; /* Высота контейнера для изображения */
+    margin-bottom: 20px;
 }
 
 .case-row img {
-    width: 150px;
+    max-width: 100%; /* Масштабирование изображения */
     height: auto;
 }
 
+#result-menu {
+    margin-top: 20px;
+}
+
+#result-menu.hidden {
+    display: none;
+}
+
+.open-case-btn {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Меню с результатом */
 #result-menu {
     margin-top: 20px;
 }
@@ -57,16 +84,13 @@ button {
     color: white;
 }
 
-.open-case-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    margin: auto;
-    display: block;
-    text-align: center;
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 600px) {
+    .case-row {
+        height: 150px; /* Уменьшенная высота на маленьких экранах */
+    }
+
+    .open-case-btn {
+        width: 90%; /* Растягиваем кнопку по ширине */
+    }
 }
