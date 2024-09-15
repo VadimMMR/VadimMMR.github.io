@@ -1,113 +1,72 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a3a; /* Темный фон */
-    color: white;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
-header {
-    margin-bottom: 20px;
+    background-color: #2b2d42;
+    color: #edf2f4;
+    text-align: center;
 }
 
 h1 {
-    color: #fff;
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
-.case-button {
-    margin-bottom: 20px;
-}
-
-.case-button button {
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: #4682b4; /* Голубая кнопка для открытия кейсов */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.case-button button:hover {
-    background-color: #4169e1;
-}
-
-.case-opening-container {
+.case-opening {
     text-align: center;
-    width: 80%;
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
 }
 
-.case-wrapper {
-    width: 600px; /* Ограничиваем видимую область */
-    overflow: hidden; /* Прячем прокрученные кейсы */
-    margin: 0 auto;
-    position: relative;
-}
 
 .case-row {
     display: flex;
-    transition: transform 3s ease; /* Плавная анимация прокрутки */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 600px;
+    height: 200px;
 }
 
-.case-item {
-    min-width: 150px;
-    height: 150px;
-    margin: 0 10px;
+.case-row img {
+    width: 150px;
+    height: auto;
 }
 
-.case-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.arrow-up, .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-}
-
-.arrow-up {
-    border-bottom: 20px solid #ffd700; /* Золотая стрелка вверх */
-    margin-bottom: 10px;
-}
-
-.arrow-down {
-    border-top: 20px solid #ffd700; /* Золотая стрелка вниз */
-    margin-top: 10px;
-}
-
-.actions {
+#result-menu {
     margin-top: 20px;
 }
 
+#result-menu.hidden {
+    display: none;
+}
+
 button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     margin: 10px;
-    font-size: 18px;
-    color: white;
-    background-color: #32cd32; /* Зелёная кнопка для "Попробовать снова" */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button#sell {
-    background-color: #4682b4; /* Голубая кнопка для "Продать" */
+#sell {
+    background-color: #ef233c;
+    color: white;
 }
 
-button:hover {
-    background-color: #3a9d3a; /* Изменение цвета при наведении */
+#claim {
+    background-color: #2ec4b6;
+    color: white;
 }
 
-button#sell:hover {
-    background-color: #4169e1;
+.open-case-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
